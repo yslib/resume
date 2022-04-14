@@ -1,6 +1,10 @@
 % !TEX program = xelatex
 
 \documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
 
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
@@ -22,22 +26,22 @@
 \role{游戏客户端开发}{}
 \begin{itemize}
   \item 客户端
-  \subsection{客户端游戏逻辑开发}
+  \subsection{客户端游戏逻辑，UI编辑器的维护和开发。UI编辑器主要通过组件绑定，生成MVVM的代码框架，用来方便的实现业务逻辑。}
 
   \item GPU着色器，UI材质开发
-  \subsection{实现相应的UI动画效果}
+  \subsection{实现相应的UI动画效果。}
 
   \item 开发和维护相应的工具链
-  \subsection{对相应的本地化工具和编辑器工具做维护}
+  \subsection{对相应的本地化工具和编辑器工具做维护。负责游戏引擎插件的功能维护和开发。}
 
 \end{itemize}
 
 \section{\faCogs\ 工作技能}
 \begin{itemize}[parsep=0.5ex]
   \item 编程语言: C/C++，Rust，Python，C\#，CUDA etc.
-  \item 熟悉计算机图形学和渲染相关的知识
-  \item Qt框架
-  \item 操作系统相关的知识
+  \item 较为熟悉计算机图形学和渲染相关的知识。读研期间主要方向是科学计算可视化，针对科学计算产生的数据使用图形学的方式进行渲染，呈现给用户。
+  \item 具有较为熟练的Qt GUI开发经验。
+  \item 具有基本的操作系统相关的知识。
 \end{itemize}
 
 \section{\faUsers\ 项目}
@@ -47,7 +51,7 @@
 \item \textbf{Vulkan 教程} (\url{https://space.bilibili.com/12690590/channel/detail?cid=180474})
 
 \begin{itemize}
-  \item 面向Vulkan的初学者教程。
+  \item 面向Vulkan的初学者教程。Vulkan作为现代图形API，具有底层和复杂的特点，本视频通过手把手写代码的过程展示了Vulkan的基础特性。使初学者能快速掌握Vulkan的核心特性。
 \end{itemize}
 
 
@@ -55,7 +59,7 @@
 
 \begin{itemize}
   \item
-  \subsection{硕士论文项目，通过结合视频压缩和GPU驱动的办法, 可以交互的帧率绘制TB级的体术据。}
+  \subsection{硕士论文项目。使用基于虚拟内存方式的工作集管理的大规模体数据绘制方法，为了在保证绘制质量的前提下减小I/O，加入了基于GPU视频编码解码以及混合分辨率技术。同时，利用现代图形API的多线程友好的特性，以多线程的方式进行GPU和内存之间的数据交互，能充分地利用I/O带宽，实现了大规模数据交互绘制，达到了单机上交互的大规模体数据可视化任务目标。}
 \end{itemize}
 
 
@@ -64,13 +68,15 @@
 
 \begin{itemize}
 
-\item 自己日常进行C++开发的基础库。包括智能指针，插件框架和内存管理模块。
+\item 自己日常进行C++开发的基础库。包括智能指针，插件框架和内存管理模块。以及图形开发常用的基础运算。
 \end{itemize}
 
 \item \textbf{EMExplore} (\url{https://github.com/yslib/EMExplorer})
 
 \subsection{
-  对扫描电镜数据提供图像处理，标记数据和标记管理、渲染数据的编辑器。
+  读研期间的项目。开发了针对扫描电镜数据的进行图像处理，特征标记和标记管理，体渲染的一体化编辑器。
+  主要是用于对扫描电镜数据的研究提供一个方便的自动化工作流。获取体术据之后，通过图像处理的方法对原始数据进行处理和增强，更容易使人判断出特征，
+  然后通过画笔等工具进行手动或自动化的方法标记特征，并且能对特征进行管理。并且可以同时绘制出数据切片和体绘制和标记混合渲染的结果。
 }
 
 \end{itemize}
@@ -81,6 +87,8 @@
 
 \item \textbf{Xiangyang He, Shuoliu Yang, Yubo Tao, Haoran Dai, Hai Lin. Graph Convolutional Network-based Semi-supervised Feature Classification of Volumes. Journal of Visualization, 2021}
 \item \textbf{Xiangyang He, Yubo Tao, Shuoliu Yang, Chuanchang Chen, Hai Lin. ScalarGCN: Scalar-value Association Analysis of Volumes based on Graph Convolutional Network. Journal of Visualization, 2021}
+
+这两篇文章主要是利用图神经网络对体术据进行学习，然后利用训练波形对体术据进行特征分类，
 
 \end{itemize}
 
